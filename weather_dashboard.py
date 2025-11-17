@@ -24,11 +24,10 @@ if st.button("查詢天氣"):
         st.error("請先輸入 API Key")
     else:
         # CWA API URL
-        url = ("https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-DC21CA27-4932-4486-BD1A-775305BA8262&locationName=Taipei"
-        )
+        url = (
+    "http://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001" f"?Authorization={api_key}&locationName={city}")
+      r = requests.get(url, timeout=10)
 
-        # 送出請求
-        r = requests.get(url)
 
         if r.status_code != 200:
             st.error("API 請求失敗，請檢查 API Key 或網路")
@@ -55,3 +54,4 @@ if st.button("查詢天氣"):
 
             except:
                 st.error("資料解析失敗，請確認 API Key 是否正確")
+
