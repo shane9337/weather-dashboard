@@ -10,7 +10,7 @@ api_key = st.text_input("請輸入你的 CWA API Key")
 
 # 城市選單
 cities = [
-    "Taipei", "New Taipei", "Taoyuan", "Hsinchu",
+    "Taipei", "New Taipei", "Taoyuan", "Yunlin",
     "Taichung", "Tainan", "Kaohsiung", "Keelung",
 ]
 
@@ -56,5 +56,6 @@ if st.button("查詢天氣"):
 
             except:
                 st.error("資料解析失敗，請確認 API Key 是否正確")
+
 
 
