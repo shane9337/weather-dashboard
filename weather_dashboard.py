@@ -38,7 +38,7 @@ if st.button("查詢天氣"):
 
     api_city = city_map[city_display]  # 給 API 用的中文地名
 
-    base_url = "https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001"
+    base_url = "http://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001"
     params = {
         "Authorization": api_key,
         "locationName": api_city,
